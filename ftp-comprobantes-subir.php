@@ -5,7 +5,7 @@ if (isset($_POST['btnSubir'])) {
 	// se obtiene un token
 	require 'includes/config.inc.php';
 
-	// se establece conexión con el FTP
+	// se establece conexiÃ³n con el FTP
 	$ftp_con = ftp_connect($conf['ftpHost'], $conf['ftpPort']);
 	$ftp_log = ftp_login($ftp_con, $conf['ftpUser'], $conf['ftpPass']); 
 	
@@ -36,7 +36,7 @@ if (isset($_POST['btnSubir'])) {
 	
 	}
 	
-	// se cierra la conexión del ftp
+	// se cierra la conexiÃ³n del ftp
 	ftp_close($ftp_con);
 	
 	echo '<pre>Proceso terminado</pre>';

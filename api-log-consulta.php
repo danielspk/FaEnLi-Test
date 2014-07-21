@@ -20,7 +20,7 @@ if (isset($_POST['btnConsultar'])) {
 	curl_close($curl);
 
 	// se decodifica y vuelve a codificar con formato para su mejor 
-	// visualización dentro del ejemplo
+	// visualizaciÃ³n dentro del ejemplo
 	echo '<pre>';
 	echo json_encode(json_decode($jsonErrores), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 	echo '</pre>';
