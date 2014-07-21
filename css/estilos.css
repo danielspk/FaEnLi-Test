@@ -1,0 +1,93 @@
+.bg {
+	background: url('../img/bg.png') repeat;
+}
+.logo{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.logo img {
+	max-height: 100px;
+	margin: 15px;
+	float: left;
+}
+.main{
+	background-color: #fff;
+	width: 850px;
+	border-width: 1px;
+	border-style: solid;
+	border-top-width: 2px;
+	border-bottom-width: 3px;
+	border-radius: 3px;
+	border-color: #276ec6;
+	margin: 30px auto;
+}
+.main h1{
+	font-size: 30px;
+	margin-left: 175px;
+	color: #50505b;
+	margin-top: 30px;
+}
+.main .links{
+	margin-top: 50px;
+	margin-left: 175px;
+	font-size: 20px;
+}
+.main i{
+	padding: 15px;
+	padding-right: 30px;
+	font-size: 30px;
+	vertical-align: middle;
+	color: #2d78d5;
+}
+.main ul {
+	padding-left: 0;
+	margin-left: 0;
+}
+.main ul li {
+	list-style: none;
+}
+.main a{
+	text-decoration: none;
+	color: #50505b;
+}
+
+body.bg {
+	background: url('../img/bg.png');
+}
+h2.titulo, h3.titulo{
+	color: #333333;
+	text-shadow: #fff 2px 1px 3px;
+}
+a.back{
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	text-decoration: none;
+	color: #276ec6;
+	font-size: 0.9em;
+	font-family: Verdana;
+}
+a.back i{
+	padding-right: 6px;
+	font-size: 0.8em;
+}
+label{
+	display: block;
+	padding-left: 5px;
+	color: #333333;
+}
+input[type=text]{
+	margin-bottom: 5px;
+}
+input[type=submit]{
+	padding: 10px;
+	color: #fff;
+	background-color: #2d78d5;
+	border: 1px solid #276ec6;
+	border-radius: 3px;
+	cursor: pointer;
+}
+input +  br + input[type=submit], textarea +  br + input[type=submit]{
+	margin-top: 10px;
+}
