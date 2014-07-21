@@ -10,7 +10,7 @@ if (isset($_POST['btnConsultar'])) {
 	// se decodifica el token obtenido
 	$token = json_decode($jsonToken);
 
-	// se realiza el log de errores
+	// se consulta el log de errores
 	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_URL, $conf['urlAPI'] . 'api/logs');
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -20,7 +20,7 @@ if (isset($_POST['btnConsultar'])) {
 	curl_close($curl);
 
 	// se decodifica y vuelve a codificar con formato para su mejor 
-	// visualizaciÃ³n dentro del ejemplo
+	// visualización dentro del ejemplo
 	echo '<pre>';
 	echo json_encode(json_decode($jsonErrores), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 	echo '</pre>';

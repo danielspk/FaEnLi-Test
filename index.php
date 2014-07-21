@@ -10,7 +10,7 @@
 <body class="bg">
 	
 	<div class="logo">
-		<img src="img/logo_generic.png" alt="FaEnLi" />
+		<img src="img/logo_faenli.png" alt="Logo FaEnLi" />
 	</div>
 		
 	<div class="main">

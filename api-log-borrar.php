@@ -10,17 +10,19 @@ if (isset($_POST['btnBorrar'])) {
 	// se decodifica el token obtenido
 	$token = json_decode($jsonToken);
 
-	// se realiza el log de errores
+	// se borra el log de errores
 	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_URL, $conf['urlAPI'] . 'api/logs/borrar');
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($curl, CURLOPT_POST, 1);
-	curl_setopt($curl, CURLOPT_POSTFIELDS,'REST_METHOD=DELETE&token=' . $token->token . '&user=' . $conf['apiUser'] . '&pass=' . $conf['apiPass']);
+	curl_setopt($curl, CURLOPT_POSTFIELDS,'REST_METHOD=DELETE&token=' . $token->token . 
+		'&user=' . $conf['apiUser'] . '&pass=' . $conf['apiPass']
+	);
 	$jsonErrores = curl_exec($curl);
 	curl_close($curl);
 
 	// se decodifica y vuelve a codificar con formato para su mejor 
-	// visualizaciÃ³n dentro del ejemplo
+	// visualización dentro del ejemplo
 	echo '<pre>';
 	echo json_encode(json_decode($jsonErrores), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 	echo '</pre>';

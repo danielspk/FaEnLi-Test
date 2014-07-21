@@ -10,7 +10,7 @@ if (isset($_POST['btnConsultar'])) {
 	// se decodifica el token obtenido
 	$token = json_decode($jsonToken);
 
-	// se realiza la consulta de los usuarios registrados
+	// se consultan los usuarios registrados
 	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_URL, $conf['urlAPI'] . 'api/usuarios');
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -24,7 +24,7 @@ if (isset($_POST['btnConsultar'])) {
 	curl_close($curl);
 
 	// se decodifica y vuelve a codificar con formato para su mejor 
-	// visualizaciÃ³n dentro del ejemplo
+	// visualización dentro del ejemplo
 	echo '<pre>';
 	echo json_encode(json_decode($jsonUsuarios), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 	echo '</pre>';
@@ -46,7 +46,7 @@ if (isset($_POST['btnConsultar'])) {
 <body class="bg">
 	
 	<h2 class="titulo">Ejemplo de como consultar los usuarios registrados:</h2>
-	<h3 class="titulo">Utilice el sÃ­mbolo % como comodin</h3>
+	<h3 class="titulo">Utilice el símbolo % como comodin</h3>
 	
 	<form action="api-usuarios-consulta.php" method="post">
 		<label for="txtNombre">Nombre: </label><input type="text" name="txtNombre" id="txtNombre" /><br />

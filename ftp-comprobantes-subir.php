@@ -5,7 +5,7 @@ if (isset($_POST['btnSubir'])) {
 	// se obtiene un token
 	require 'includes/config.inc.php';
 
-	// conexiÃ³n FTP
+	// se establece conexión con el FTP
 	$ftp_con = ftp_connect($conf['ftpHost'], $conf['ftpPort']);
 	$ftp_log = ftp_login($ftp_con, $conf['ftpUser'], $conf['ftpPass']); 
 	
@@ -14,7 +14,7 @@ if (isset($_POST['btnSubir'])) {
 		exit();
 	}
 	
-	// se suben los archivos
+	// se recorren los archivos para su upload
 	$archivos = json_decode($_POST['txtArchivos']);
 	
 	foreach ($archivos->archivos as $archivo) {
@@ -36,7 +36,7 @@ if (isset($_POST['btnSubir'])) {
 	
 	}
 	
-	// se cierra la conexiÃ³n al ftp
+	// se cierra la conexión del ftp
 	ftp_close($ftp_con);
 	
 	echo '<pre>Proceso terminado</pre>';
